@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//returns sum of all multiples of 3 and 5 up to the input
+	//returns sum of all multiples of 3 and 5 up to the input value
 	$("#getSolution1").click(function() {
 		var n = parseInt(document.getElementById("inputText").value);
 		var total = 0;
@@ -10,7 +10,7 @@ $(document).ready(function(){
 		};
   		$("#solution1").html(total);
   });
-
+		//returns the sum of the even numbers of the Fibonacci sequence up to the input value
 		$("#getSolution2").click(function() {
 			var n = parseInt(document.getElementById("inputText2").value);
 			var total = 0;
@@ -25,6 +25,34 @@ $(document).ready(function(){
 				}
 			}
   		$("#solution2").html(total);
+  });
+
+	$("#getSolution3").click(function() {
+				var n = parseInt(document.getElementById("inputText3").value);
+				var allFactors = [];
+				var primeFactors = [];
+				for (var i=0; i<n; i++) {
+					if (n%i==0) {
+						allFactors.push(i);
+					};
+				};
+
+				function isPrime(n) {
+					var primality = true;
+					for (var i=2; i<Math.sqrt(n); i++) {
+						if (n % i == 0) {
+							primality = false;
+						}
+					};
+					return primality;
+				};
+
+				for (var x=0; x<allFactors.length; x++) {
+						if (isPrime(allFactors[x]) == true) {
+								primeFactors.push(allFactors[x]);
+							};
+						};
+	  		$("#solution3").html(primeFactors[primeFactors.length-1]);
   });
 
 });
