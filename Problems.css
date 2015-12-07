@@ -1,0 +1,18 @@
+html {
+	text-align: center;
+	font-family: helvetica;
+	color: white;
+}
+
+body {
+	background-color: #19343d;
+	color: #e6e6e6;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-bottom: 5%;
+}
+
+#inputText, #inputText2, #inputText3 {
+	border-radius: 5px;
+	color: #19343d;
+}

@@ -8,7 +8,7 @@ $(document).ready(function(){
 				total += i;
 			};
 		};
-  		$("#solution1").html(total);
+  		$("#solution1").html(total.toLocaleString());
   });
 		//returns the sum of the even numbers of the Fibonacci sequence up to the input value
 		$("#getSolution2").click(function() {
@@ -24,7 +24,7 @@ $(document).ready(function(){
 					total += fibonacciSequence[i];
 				}
 			}
-  		$("#solution2").html(total);
+  		$("#solution2").html(total.toLocaleString());
   });
 
 	$("#getSolution3").click(function() {
@@ -52,7 +52,7 @@ $(document).ready(function(){
 								primeFactors.push(allFactors[x]);
 							};
 						};
-	  		$("#solution3").html(primeFactors[primeFactors.length-1]);
+	  		$("#solution3").html(primeFactors[primeFactors.length-1].toLocaleString());
   });
 
 });
