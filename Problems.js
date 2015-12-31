@@ -31,7 +31,7 @@ $(document).ready(function(){
 				var n = parseInt(document.getElementById("inputText3").value);
 				var allFactors = [];
 				var primeFactors = [];
-				for (var i=0; i<n; i++) {
+				for (var i=1; i<n; i++) {
 					if (n%i==0) {
 						allFactors.push(i);
 					};
