@@ -11,22 +11,22 @@ $(document).ready(function(){
   		$("#solution1").html(total.toLocaleString());
   });
 		//returns the sum of the even numbers of the Fibonacci sequence up to the input value
-		$("#getSolution2").click(function() {
-			var n = parseInt(document.getElementById("inputText2").value);
-			var total = 0;
-			var fibonacciSequence =[1,2];
-			for (var i=1; fibonacciSequence[i]<n; i++) {
-				var val = fibonacciSequence[i] + fibonacciSequence[i-1];
-				fibonacciSequence.push(val);
+	$("#getSolution2").click(function() {
+		var n = parseInt(document.getElementById("inputText2").value);
+		var total = 0;
+		var fibonacciSequence =[1,2];
+		for (var i=1; fibonacciSequence[i]<n; i++) {
+			var val = fibonacciSequence[i] + fibonacciSequence[i-1];
+			fibonacciSequence.push(val);
 			};
-			for (var i=0; i<fibonacciSequence.length; i++) {
-				if (fibonacciSequence[i] % 2 == 0) {
-					total += fibonacciSequence[i];
-				}
+		for (var i=0; i<fibonacciSequence.length; i++) {
+			if (fibonacciSequence[i] % 2 == 0) {
+				total += fibonacciSequence[i];
 			}
+		};
   		$("#solution2").html(total.toLocaleString());
   });
-
+	//returns the largest prime factor of the input number (computes slowly after 7 places)
 	$("#getSolution3").click(function() {
 				var n = parseInt(document.getElementById("inputText3").value);
 				var allFactors = [];
